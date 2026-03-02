@@ -1,15 +1,3 @@
-import '../styles/globals.css';
-import { useEffect } from 'react';
-
-function MyApp({ Component, pageProps }) {
-  useEffect(() => {
-    const isDark = localStorage.getItem('tema-escuro') === 'true';
-    if (isDark) {
-      document.body.classList.add('dark');
-    }
-  }, []);
-
+export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
-
-export default MyApp;
