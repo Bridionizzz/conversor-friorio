@@ -1,0 +1,31 @@
+{
+  "buildCommand": "npm run build",
+  "devCommand": "next dev",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "nodeVersion": "20.x",
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": {
+      "description": "URL do Supabase",
+      "required": true
+    },
+    "NEXT_PUBLIC_SUPABASE_KEY": {
+      "description": "Chave pública Supabase",
+      "required": true
+    },
+    "SUPABASE_SERVICE_KEY": {
+      "description": "Chave de serviço Supabase (secreto)",
+      "required": true
+    }
+  },
+  "buildOutputDirectory": ".next",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "regions": ["sfo1", "iad1", "cdg1"],
+  "functions": {
+    "pages/api/**/*.js": {
+      "memory": 512,
+      "maxDuration": 30
+    }
+  }
+}
