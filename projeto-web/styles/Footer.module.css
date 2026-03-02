@@ -1,0 +1,60 @@
+/* styles/Footer.module.css */
+.footer {
+  background: var(--bg-alt);
+  border-top: 2px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .footer {
+  background: var(--bg-dark-alt);
+  border-top-color: var(--border-dark);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+}
+
+.content p {
+  margin: 0.5rem 0;
+  opacity: 0.7;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.links a:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+.tech {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem;
+  }
+
+  .links {
+    gap: 1rem;
+    flex-direction: column;
+  }
+}
